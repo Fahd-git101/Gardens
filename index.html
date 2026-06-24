@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gardens – Premium Boxes</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <i class="fas fa-seedling"></i><span>Gardens</span>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#boxes"><i class="fas fa-box"></i> Boxes</a></li>
+                    <li><a href="#advice"><i class="fas fa-leaf"></i> Advice</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><i class="fas fa-leaf"></i> Grow Your Own Garden</h1>
+            <p><i class="fas fa-truck"></i> Premium monthly gardening boxes — fresh, organic, and delivered to your door.</p>
+            <a href="#boxes" class="btn-primary"><i class="fas fa-shopping-bag"></i> Explore Boxes</a>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-text">
+                    <h2><i class="fas fa-seedling" style="color:#a3d65a;"></i> About Gardens</h2>
+                    <p><i class="fas fa-hand-holding-heart" style="color:#a3d65a;"></i> We help beginners and seasoned gardeners grow their own food and flowers. Every box is curated with love, sustainability, and the best organic seeds.</p>
+                </div>
+                <div class="about-image">
+                    <img src="Assest/about.jpg" alt="Gardening" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BOXES ==================== -->
+    <section id="boxes">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-box-open"></i> Our Boxes</h2>
+            <p class="section-sub"><i class="fas fa-arrow-right"></i> Choose the perfect box for your gardening journey</p>
+
+            <div class="box-grid">
+                <!-- Oddbox -->
+                <div class="box-card">
+                    <i class="fas fa-carrot"></i>
+                    <h3>Oddbox</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <span>Wonky veggies (supermarket rejects)</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Weekly delivery</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Vegetable seeds included</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Exclusive blog access</span></li>
+                    </ul>
+                    <div class="price"><i class="fas fa-tag"></i> £25 <span style="font-size:16px;font-weight:400;">/ month</span></div>
+                    <button class="btn-small" onclick="alert('🎉 Subscribed to Oddbox!')"><i class="fas fa-check"></i> Subscribe</button>
+                </div>
+
+                <!-- Flourish -->
+                <div class="box-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Flourish</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <span>4 boxes per year</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Seed trays + premium seeds</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Watering can &amp; soap</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Handmade cruelty-free soap</span></li>
+                    </ul>
+                    <div class="price"><i class="fas fa-tag"></i> £40 <span style="font-size:16px;font-weight:400;">/ year</span></div>
+                    <button class="btn-small" onclick="alert('🎉 Subscribed to Flourish!')"><i class="fas fa-check"></i> Subscribe</button>
+                </div>
+
+                <!-- Cottage -->
+                <div class="box-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Cottage</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <span>Monthly box</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Wildflower seeds</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Fact cards + markers</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Natural twine included</span></li>
+                    </ul>
+                    <div class="price"><i class="fas fa-tag"></i> £30 <span style="font-size:16px;font-weight:400;">/ month</span></div>
+                    <button class="btn-small" onclick="alert('🎉 Subscribed to Cottage!')"><i class="fas fa-check"></i> Subscribe</button>
+                </div>
+
+                <!-- Custom -->
+                <div class="box-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Custom</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <span>Tailored for corporate gifts</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Bespoke subscription plans</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Dedicated account manager</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span>Flexible delivery schedule</span></li>
+                    </ul>
+                    <div class="price"><i class="fas fa-phone"></i> Contact us</div>
+                    <a href="#contact" class="btn-small-outline"><i class="fas fa-envelope"></i> Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <h3 style="margin-top:50px; text-align:center;"><i class="fas fa-chart-bar"></i> Compare Boxes</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-cog"></i> Feature</th>
+                        <th><i class="fas fa-carrot"></i> Oddbox</th>
+                        <th><i class="fas fa-spa"></i> Flourish</th>
+                        <th><i class="fas fa-seedling"></i> Cottage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong><i class="fas fa-tag"></i> Price</strong></td>
+                        <td>£25/mo</td>
+                        <td>£40/yr</td>
+                        <td>£30/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong><i class="fas fa-truck"></i> Delivery</strong></td>
+                        <td>Weekly</td>
+                        <td>4x/year</td>
+                        <td>Monthly</td>
+                    </tr>
+                    <tr>
+                        <td><strong><i class="fas fa-seedling"></i> Seeds</strong></td>
+                        <td>Vegetable</td>
+                        <td>Vegetable + trays</td>
+                        <td>Wildflower</td>
+                    </tr>
+                    <tr>
+                        <td><strong><i class="fas fa-gift"></i> Extras</strong></td>
+                        <td>Blog</td>
+                        <td>Watering can, soap</td>
+                        <td>Cards, markers, twine</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Customer Reviews -->
+            <h3 style="margin-top:50px; text-align:center;"><i class="fas fa-star" style="color:#f5b342;"></i> What Gardeners Say</h3>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p><i class="fas fa-quote-left" style="color:#a3d65a;"></i> Oddbox changed my cooking! <i class="fas fa-quote-right" style="color:#a3d65a;"></i></p>
+                    <small><i class="fas fa-user"></i> – Emma</small>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p><i class="fas fa-quote-left" style="color:#a3d65a;"></i> Flourish made me a gardener. <i class="fas fa-quote-right" style="color:#a3d65a;"></i></p>
+                    <small><i class="fas fa-user"></i> – James</small>
+                </div>
+                <div class="review-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p><i class="fas fa-quote-left" style="color:#a3d65a;"></i> Cottage is pure joy. <i class="fas fa-quote-right" style="color:#a3d65a;"></i></p>
+                    <small><i class="fas fa-user"></i> – Sophie</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ADVICE ==================== -->
+    <section id="advice">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-leaf"></i> Gardening Advice</h2>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search tips, plants, or topics..." />
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th-list"></i> All</button>
+                <button class="filter-btn" data-filter="checklist"><i class="fas fa-check-double"></i> Checklist</button>
+                <button class="filter-btn" data-filter="greenhouse"><i class="fas fa-thermometer-half"></i> Greenhouse</button>
+                <button class="filter-btn" data-filter="maintenance"><i class="fas fa-tools"></i> Maintenance</button>
+                <button class="filter-btn" data-filter="allotment"><i class="fas fa-tractor"></i> Allotment</button>
+            </div>
+
+            <div class="advice-grid" id="adviceGrid">
+                <div class="advice-card" data-category="checklist">
+                    <h4><i class="fas fa-calendar-check" style="color:#a3d65a;"></i> April Checklist</h4>
+                    <p><i class="fas fa-seedling" style="color:#a3d65a;"></i> Prepare soil – remove weeds and add compost.<br><i class="fas fa-seedling" style="color:#a3d65a;"></i> Plant summer bulbs – dahlias, lilies, gladioli.<br><i class="fas fa-tint" style="color:#a3d65a;"></i> Water regularly – check soil moisture daily.<br><i class="fas fa-shield-alt" style="color:#a3d65a;"></i> Protect young plants – use cloches or fleece.<br><i class="fas fa-seedling" style="color:#a3d65a;"></i> Feed your plants – apply balanced fertiliser.</p>
+                </div>
+                <div class="advice-card" data-category="greenhouse">
+                    <h4><i class="fas fa-thermometer-half" style="color:#a3d65a;"></i> Greenhouse Ventilation</h4>
+                    <p><i class="fas fa-wind" style="color:#a3d65a;"></i> Ventilate on warm days. Water in the morning to prevent disease. Use shade cloth during hot weather to protect delicate plants.</p>
+                </div>
+                <div class="advice-card" data-category="maintenance">
+                    <h4><i class="fas fa-cut" style="color:#a3d65a;"></i> Pruning & Mulching</h4>
+                    <p><i class="fas fa-cut" style="color:#a3d65a;"></i> Prune shrubs after flowering. Mulch beds to retain moisture and suppress weeds. Check for pests and diseases weekly.</p>
+                </div>
+                <div class="advice-card" data-category="allotment">
+                    <h4><i class="fas fa-tractor" style="color:#a3d65a;"></i> Allotment Jobs</h4>
+                    <p><i class="fas fa-seedling" style="color:#a3d65a;"></i> Prepare beds for planting. Sow carrots, peas, and beans. Protect crops from birds with netting or scarecrows. <em>(Allotment = a small plot of land rented for growing vegetables)</em></p>
+                </div>
+                <div class="advice-card" data-category="checklist">
+                    <h4><i class="fas fa-calendar-check" style="color:#a3d65a;"></i> May Checklist</h4>
+                    <p><i class="fas fa-seedling" style="color:#a3d65a;"></i> Harden off young plants before planting outside.<br><i class="fas fa-seedling" style="color:#a3d65a;"></i> Plant out tomatoes, peppers, and cucumbers.<br><i class="fas fa-tint" style="color:#a3d65a;"></i> Water regularly and feed weekly.<br><i class="fas fa-cut" style="color:#a3d65a;"></i> Mow lawns more frequently.<br><i class="fas fa-seedling" style="color:#a3d65a;"></i> Deadhead flowers to encourage more blooms.</p>
+                </div>
+                <div class="advice-card" data-category="greenhouse">
+                    <h4><i class="fas fa-cloud-sun" style="color:#a3d65a;"></i> Shading & Watering</h4>
+                    <p><i class="fas fa-cloud-sun" style="color:#a3d65a;"></i> Apply greenhouse shading to prevent overheating. Water early in the morning or late evening to reduce evaporation. Install automatic vent openers for better climate control.</p>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <a href="#"><i class="fas fa-book"></i> Plant Diary</a>
+                </div>
+                <div class="feature-item">
+                    <a href="#"><i class="fas fa-poll"></i> Seasonal Survey</a>
+                </div>
+                <div class="feature-item">
+                    <a href="#"><i class="fas fa-camera"></i> Photo Competition</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Contact Us</h2>
+
+            <div class="contact-flex">
+                <div class="contact-form">
+                    <input type="text" placeholder="Your Name" />
+                    <input type="email" placeholder="Your Email" />
+                    <input type="text" placeholder="Subject" />
+                    <textarea placeholder="Your Message..."></textarea>
+                    <button class="btn-primary" onclick="alert('✅ Message sent! We\'ll reply soon.')">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </div>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@gardens.com</p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +44 1234 567890</p>
+                    <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Mon–Fri, 9am–5pm</p>
+
+                    <h3 style="margin-top:24px;"><i class="fas fa-question-circle" style="color:#a3d65a;"></i> FAQ</h3>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-times-circle" style="color:#a3d65a;"></i> How do I cancel my subscription?</h4>
+                        <p>You can cancel anytime by emailing us.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-truck" style="color:#a3d65a;"></i> How long does delivery take?</h4>
+                        <p>3–5 working days.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-gift" style="color:#a3d65a;"></i> Can I gift a subscription box?</h4>
+                        <p>Yes! Choose the gift option at checkout.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-globe" style="color:#a3d65a;"></i> Do you deliver internationally?</h4>
+                        <p>Currently UK & Europe only.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-leaf" style="color:#a3d65a;"></i> Are your products organic?</h4>
+                        <p>100% organic and sustainable.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-exchange-alt" style="color:#a3d65a;"></i> Can I change my box after subscribing?</h4>
+                        <p>Yes, just contact us to adjust your plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-envelope"></i> info@gardens.com | <i class="fas fa-phone-alt"></i> +44 1234 567890</p>
+            <p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </p>
+            <p style="margin-top:16px; opacity:0.7;"><i class="far fa-copyright"></i> 2026 Gardens. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
