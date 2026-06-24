@@ -19,7 +19,6 @@ const adviceCards = document.querySelectorAll('.advice-card');
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Remove active class from all buttons
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -50,7 +49,6 @@ searchInput.addEventListener('input', function() {
         }
     });
 
-    // Also reset filter buttons to "All" when searching
     if (query.length > 0) {
         filterBtns.forEach(b => b.classList.remove('active'));
         document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
@@ -61,4 +59,23 @@ searchInput.addEventListener('input', function() {
 document.querySelector('.hero .btn-primary').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('boxes').scrollIntoView({ behavior: 'smooth' });
+});
+
+// ---------- BACK TO TOP ----------
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+
+backToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });

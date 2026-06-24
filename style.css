@@ -57,19 +57,20 @@ body {
     color: #1e2f23;
     line-height: 1.6;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-/* ---------- HEADER ---------- */
+/* ---------- HEADER (FIXED) ---------- */
 header {
     background: #0f1f17;
     padding: 14px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
@@ -165,7 +166,7 @@ section {
 
 /* ---------- HERO ---------- */
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,7 +335,7 @@ section {
     border-bottom: 1px solid #f0f5ee;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 50px;
 }
 
 .box-card ul li:last-child {
@@ -342,7 +343,6 @@ section {
 }
 
 .box-card ul li i {
-    padding: 0px 50px 0px 0px ;
     flex-shrink: 0;
     width: 20px;
     margin-top: 3px;
@@ -689,6 +689,41 @@ section {
     box-shadow: 0 12px 28px rgba(163, 214, 90, 0.5);
 }
 
+/* ---------- BACK TO TOP ---------- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #a3d65a;
+    color: #0f1f17;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(163, 214, 90, 0.4);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #b8e07a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(163, 214, 90, 0.6);
+}
+
 /* ---------- FOOTER ---------- */
 footer {
     background: #0f1f17;
@@ -716,6 +751,10 @@ footer p {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -774,7 +813,7 @@ footer p {
     }
 
     .box-card ul li {
-        gap: 8px;
+        gap: 30px;
     }
 
     .box-card ul li span {
@@ -821,5 +860,9 @@ footer p {
     .btn-small-outline {
         font-size: 13px;
         padding: 8px 20px;
+    }
+
+    .box-card ul li {
+        gap: 20px;
     }
 }
