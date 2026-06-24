@@ -5,6 +5,48 @@
     box-sizing: border-box;
 }
 
+/* ===== FIX: Overflow for ALL elements ===== */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+img,
+svg,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container,
+section,
+.hero,
+.about,
+#boxes,
+#advice,
+#contact,
+footer {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Fix for long words or URLs */
+p,
+h1,
+h2,
+h3,
+h4,
+li,
+span,
+a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -151,6 +193,9 @@ section {
     letter-spacing: -1px;
     margin-bottom: 16px;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .hero h1 i {
@@ -165,6 +210,9 @@ section {
     margin-left: auto;
     margin-right: auto;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .hero .btn-primary {
@@ -250,6 +298,9 @@ section {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .box-card:hover {
@@ -291,7 +342,7 @@ section {
 }
 
 .box-card ul li i {
-    padding: 0 50px 0 0 ;
+    padding: 0px 50px 0px 0px ;
     flex-shrink: 0;
     width: 20px;
     margin-top: 3px;
@@ -302,6 +353,8 @@ section {
 .box-card ul li span {
     flex: 1;
     word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .box-card .price {
@@ -363,21 +416,35 @@ section {
     box-shadow: 0 8px 28px rgba(0,0,0,0.04);
 }
 
-.comparison-table th {
-    background: #0f1f17;
-    color: #fff;
-    padding: 16px;
-    text-align: center;
-}
-
+.comparison-table th,
 .comparison-table td {
-    padding: 14px;
+    padding: 16px 20px;
     text-align: center;
     border-bottom: 1px solid #eaf0e8;
 }
 
+.comparison-table th {
+    background: #0f1f17;
+    color: #fff;
+}
+
 .comparison-table tr:last-child td {
     border-bottom: none;
+}
+
+/* ---------- COMPARISON TABLE WRAPPER ---------- */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.04);
+}
+
+.table-wrapper .comparison-table {
+    box-shadow: none;
+    margin: 0;
+    border-radius: 20px;
 }
 
 /* ---------- REVIEWS ---------- */
@@ -393,6 +460,9 @@ section {
     padding: 20px;
     border-radius: 20px;
     border: 1px solid #e3ede3;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .stars {
@@ -403,7 +473,7 @@ section {
 /* ---------- ADVICE ---------- */
 #advice {
     background: #fff;
-    /* background-image: url(/Assest/advice.jpg); */
+    background-image: url('images/advice-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -473,12 +543,21 @@ section {
     padding: 20px;
     border-radius: 20px;
     border: 1px solid #e3ede3;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .advice-card h4 {
     font-size: 20px;
     margin-bottom: 8px;
     color: #0f1f17;
+}
+
+.advice-card p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* ---------- FEATURES ---------- */
@@ -495,6 +574,9 @@ section {
     border-radius: 20px;
     text-align: center;
     border: 1px solid #e3ede3;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .feature-item a {
@@ -538,6 +620,8 @@ section {
     margin-bottom: 16px;
     background: #fff;
     transition: 0.3s;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .contact-form input:focus,
@@ -555,6 +639,9 @@ section {
     padding: 28px;
     border-radius: 24px;
     border: 1px solid #e3ede3;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-info p {
@@ -570,7 +657,13 @@ section {
     color: #0f1f17;
 }
 
-/* ---------- CONTACT FORM BUTTON (Fixed) ---------- */
+.faq-item p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* ---------- CONTACT FORM BUTTON ---------- */
 .contact-form .btn-primary {
     width: 100%;
     display: flex;
@@ -615,6 +708,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
     .hamburger {
@@ -641,10 +740,12 @@ footer a:hover {
 
     .hero h1 {
         font-size: 36px;
+        word-break: break-word;
     }
 
     .hero p {
         font-size: 17px;
+        word-break: break-word;
     }
 
     .contact-flex {
@@ -663,16 +764,39 @@ footer a:hover {
         order: -1;
     }
 
-    /* زر الإرسال في الموبايل */
     .contact-form .btn-primary {
         font-size: 16px;
         padding: 14px 28px;
+    }
+
+    .box-card {
+        padding: 20px 16px;
+    }
+
+    .box-card ul li {
+        gap: 8px;
+    }
+
+    .box-card ul li span {
+        font-size: 14px;
+    }
+
+    .comparison-table {
+        font-size: 13px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px 12px;
+        white-space: normal;
+        word-break: break-word;
     }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 28px;
+        word-break: break-word;
     }
 
     .section-title {
